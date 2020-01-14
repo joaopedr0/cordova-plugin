@@ -24,6 +24,8 @@ public class KioskActivity extends CordovaActivity {
     public static volatile boolean running = false;
     public static volatile boolean kioskModeEnabled = false;
 
+    private StatusBarOverlay statusBarOverlay = null;
+
     protected void onStart() {
         super.onStart();
         System.out.println("KioskActivity started");
