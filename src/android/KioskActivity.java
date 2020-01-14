@@ -15,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.ViewGroup.LayoutParams;
 import java.lang.Integer;
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,6 +26,8 @@ public class KioskActivity extends CordovaActivity {
     public static volatile boolean kioskModeEnabled = false;
 
     private StatusBarOverlay statusBarOverlay = null;
+
+    private final List blockedKeys = new ArrayList(Arrays.asList(KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_UP));
 
     protected void onStart() {
         super.onStart();
@@ -86,6 +89,15 @@ public class KioskActivity extends CordovaActivity {
             activityManager.moveTaskToFront(getTaskId(), 0);
         }
 
+    }
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (blockedKeys.contains(event.getKeyCode())) {
+            return true;
+        } else {
+            return super.dispatchKeyEvent(event);
+        }
     }
 
     // http://www.andreas-schrade.de/2015/02/16/android-tutorial-how-to-create-a-kiosk-mode-in-android/

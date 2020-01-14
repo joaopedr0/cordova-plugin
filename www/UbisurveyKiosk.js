@@ -2,11 +2,11 @@ var exec = require('cordova/exec');
 
 var Kiosk = {
   setKioskEnabled(enabled) {
-    exec(null, null, "Kiosk", "setKioskEnabled", [!!enabled]);
+    exec(null, null, "UbisurveyKiosk", "setKioskEnabled", [!!enabled]);
   },
 
   switchLauncher: function() {
-    exec(null, null, "Kiosk", "switchLauncher", []);
+    exec(null, null, "UbisurveyKiosk", "switchLauncher", []);
   },
 
   isInKiosk: function(callback) {
@@ -15,9 +15,9 @@ var Kiosk = {
         callback(out == "true");
       },
       function(error) {
-        alert("Kiosk.isInKiosk failed: " + error);
+        alert("UbisurveyKiosk.isInKiosk failed: " + error);
       },
-      "Kiosk",
+      "UbisurveyKiosk",
       "isInKiosk",
       []
     );
@@ -31,7 +31,7 @@ var Kiosk = {
       function(error) {
         alert("Kiosk.isSetAsLauncher failed: " + error);
       },
-      "Kiosk",
+      "UbisurveyKiosk",
       "isSetAsLauncher",
       []
     );
