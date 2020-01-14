@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-toastyplugin" version="0.0.1">
-    <name>ToastyPlugin</name>
+        id="cordova-plugin-ubisurveykiosk" version="0.0.1">
+    <name>UbisurveyKiosk</name>
 
-    <description>An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.</description>
+    <description>Ubisurvey Kiosk Plugin</description>
     <license>MIT</license>
 
     <keywords>cordova,android,toast,message,alert</keywords>
@@ -15,16 +15,16 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
   
-    <js-module src="www/toastyplugin.js" name="toastyPlugin">
-        <clobbers target="window.plugins.toastyPlugin" />
+    <js-module src="www/UbisurveyKiosk.js" name="UbisurveyKiosk">
+        <clobbers target="window.plugins.UbisurveyKiosk" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="ToastyPlugin">
-                <param name="android-package" value="cordova.plugin.ToastyPlugin"/>
+            <feature name="UbisurveyKiosk">
+                <param name="android-package" value="cordova.plugin.Kiosk"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/ToastyPlugin.java" target-dir="src/cordova/plugin" />
+        <source-file src="src/android/UbisurveyKiosk.java" target-dir="src/cordova/plugin" />
     </platform>
 </plugin>

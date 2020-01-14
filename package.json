@@ -1,9 +1,9 @@
 {
-    "name": "cordova-plugin-toastyplugin",
+    "name": "cordova-plugin-ubisurveykiosk",
     "version": "0.0.1",
-    "description": "An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.",
+    "description": "Ubisurvey Kiosk Plugin",
     "cordova": {
-      "id": "cordova-plugin-toastyplugin",
+      "id": "cordova-plugin-ubisurveykiosk",
       "platforms": [
         "android"
       ]
