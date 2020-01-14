@@ -1,4 +1,4 @@
-package cordova.plugin;
+package com.cordova.plugin;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

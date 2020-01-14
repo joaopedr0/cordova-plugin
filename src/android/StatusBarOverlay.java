@@ -1,4 +1,4 @@
-package cordova.plugin;
+package com.cordova.plugin;
 
 import android.app.Activity;
 import android.content.Context;

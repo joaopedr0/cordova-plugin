@@ -2,9 +2,9 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-ubisurveykiosk" version="0.0.1">
-    <name>UbisurveyKiosk</name>
+    <name>ToastyPlugin</name>
 
-    <description>Ubisurvey Kiosk Plugin</description>
+    <description>Ubisurvey Kiosk Plugin.</description>
     <license>MIT</license>
 
     <keywords>cordova,android,toast,message,alert</keywords>
@@ -15,16 +15,16 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
   
-    <js-module src="www/UbisurveyKiosk.js" name="UbisurveyKiosk">
-        <clobbers target="window.plugins.UbisurveyKiosk" />
+    <js-module src="www/UbisurveyKiosk.js" name="ubisurveyKiosk">
+        <clobbers target="window.plugins.ubisurveyKiosk" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UbisurveyKiosk">
-                <param name="android-package" value="cordova.plugin.UbisurveyKiosk"/>
+                <param name="android-package" value="com.cordova.plugin.UbisurveyKiosk"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/UbisurveyKiosk.java" target-dir="src/cordova/plugin" />
+        <source-file src="src/android/UbisurveyKiosk.java" target-dir="src/com/cordova/plugin" />
     </platform>
 </plugin>

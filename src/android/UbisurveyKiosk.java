@@ -1,4 +1,4 @@
-package cordova.plugin;
+package com.cordova.plugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -13,7 +13,7 @@ import android.os.Bundle;
 import org.apache.cordova.*;
 import android.widget.*;
 
-import src.android.KioskActivity;
+import com.cordova.plugin.KioskActivity;
 
 /**
  * This class echoes a string called from JavaScript.
