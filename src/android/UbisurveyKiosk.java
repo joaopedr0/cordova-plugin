@@ -13,7 +13,7 @@ import android.os.Bundle;
 import org.apache.cordova.*;
 import android.widget.*;
 
-import cordova.plugin.KioskActivity;
+import src.android.KioskActivity;
 
 /**
  * This class echoes a string called from JavaScript.
