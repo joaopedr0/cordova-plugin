@@ -7,6 +7,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Intent;
+import android.content.pm.ResolveInfo;
+import android.os.Bundle;
+import org.apache.cordova.*;
+import android.widget.*;
+
+import cordova.plugin.KioskActivity;
+
 /**
  * This class echoes a string called from JavaScript.
  */
