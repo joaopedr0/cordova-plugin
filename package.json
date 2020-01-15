@@ -1,9 +1,9 @@
 {
-    "name": "cordova-plugin-ubisurveykiosk",
+    "name": "cordova-plugin-kioskmode",
     "version": "0.0.1",
-    "description": "Ubisurvey Kiosk Plugin",
+    "description": "Kiosk Mode Plugin",
     "cordova": {
-      "id": "cordova-plugin-ubisurveykiosk",
+      "id": "cordova-plugin-kioskmode",
       "platforms": [
         "android"
       ]
@@ -13,10 +13,7 @@
       "url": "git+https://github.com/joaopedr0/cordovaplugin.git"
     },
     "keywords": [
-      "Toast",
-      "Notification",
-      "Message",
-      "Alert",
+      "Kiosk",
       "ecosystem:cordova",
       "cordova-android"
     ],

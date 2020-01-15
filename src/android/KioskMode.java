@@ -17,7 +17,7 @@ import com.cordova.plugin.KioskActivity;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class UbisurveyKiosk extends CordovaPlugin {
+public class KioskMode extends CordovaPlugin {
 
     public static final String SET_KIOSK_ENABLED = "setKioskEnabled";
     public static final String SWITCH_LAUNCHER = "switchLauncher";

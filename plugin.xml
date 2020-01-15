@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-ubisurveykiosk" version="0.0.1">
-    <name>ToastyPlugin</name>
+        id="cordova-plugin-kioskmode" version="0.0.1">
+    <name>KioskMode</name>
 
-    <description>Ubisurvey Kiosk Plugin.</description>
+    <description>Kiosk Mode Plugin</description>
     <license>MIT</license>
 
-    <keywords>cordova,android,toast,message,alert</keywords>
+    <keywords>cordova,android,kiosk</keywords>
     <repo>https://github.com/joaopedr0/cordovaplugin.git</repo>
     <issue>https://github.com/joaopedr0/cordovaplugin/issues</issue>
   
@@ -15,13 +15,13 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
   
-    <js-module src="www/UbisurveyKiosk.js" name="ubisurveyKiosk">
-        <clobbers target="window.plugins.ubisurveyKiosk" />
+    <js-module src="www/kioskmode.js" name="kioskMode">
+        <clobbers target="window.plugins.kioskMode" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="UbisurveyKiosk">
-                <param name="android-package" value="com.cordova.plugin.UbisurveyKiosk"/>
+            <feature name="KioskMode">
+                <param name="android-package" value="com.cordova.plugin.KioskMode"/>
             </feature>
         </config-file>
 
@@ -52,7 +52,7 @@
                 <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
         </config-file>
 
-        <source-file src="src/android/UbisurveyKiosk.java" target-dir="src/com/cordova/plugin" />
+        <source-file src="src/android/KioskMode.java" target-dir="src/com/cordova/plugin" />
         <source-file src="src/android/KioskActivity.java" target-dir="src/com/cordova/plugin" />
         <source-file src="src/android/MyPackageReplacedEventReceiver.java" target-dir="src/com/cordova/plugin" />
         <source-file src="src/android/StatusBarOverlay.java" target-dir="src/com/cordova/plugin" />
