@@ -1,1 +1,1 @@
-# cordovaplugin
+# Kiosk Mode Cordova Plugin for Android
