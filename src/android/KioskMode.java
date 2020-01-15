@@ -29,7 +29,7 @@ public class KioskMode extends CordovaPlugin {
         try {
             if (IS_IN_KIOSK.equals(action)) {
 
-                callbackContext.success(Boolean.toString(KioskActivity.kioskModeEnabled));
+                callbackContext.success(Boolean.toString(KioskActivity.running));
                 return true;
 
             } else if (IS_SET_AS_LAUNCHER.equals(action)) {
@@ -37,12 +37,7 @@ public class KioskMode extends CordovaPlugin {
                 String myPackage = cordova.getActivity().getApplicationContext().getPackageName();
                 callbackContext.success(Boolean.toString(myPackage.equals(findLauncherPackageName())));
                 return true;
-            } else if (SET_KIOSK_ENABLED.equals(action)) {
-                KioskActivity.kioskModeEnabled = args.getBoolean(0);
-                callbackContext.success();
-                return true;
             } else if (SWITCH_LAUNCHER.equals(action)) {
-                KioskActivity.kioskModeEnabled = false;
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_HOME);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
