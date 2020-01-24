@@ -10,7 +10,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/joaopedr0/cordovaplugin.git"
+      "url": "git+https://github.com/joaopedr0/cordova-plugin-kioskmode.git"
     },
     "keywords": [
       "Kiosk",
@@ -26,7 +26,7 @@
     "author": "Joao Pedro <jp.jones@hotmail.com>",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/joaopedr0/cordovaplugin/issues"
+      "url": "https://github.com/joaopedr0/cordova-plugin-kioskmode/issues"
     },
-    "homepage": "https://github.com/joaopedr0/cordovaplugin"
+    "homepage": "https://github.com/joaopedr0/cordova-plugin-kioskmode"
   }

@@ -8,8 +8,8 @@
     <license>MIT</license>
 
     <keywords>cordova,android,kiosk</keywords>
-    <repo>https://github.com/joaopedr0/cordovaplugin.git</repo>
-    <issue>https://github.com/joaopedr0/cordovaplugin/issues</issue>
+    <repo>https://github.com/joaopedr0/cordova-plugin-kioskmode.git</repo>
+    <issue>https://github.com/joaopedr0/cordova-plugin-kioskmode/issues</issue>
   
     <engines>
         <engine name="cordova" version=">=3.0.0"/>

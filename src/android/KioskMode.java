@@ -19,7 +19,6 @@ import com.cordova.plugin.KioskActivity;
  */
 public class KioskMode extends CordovaPlugin {
 
-    public static final String SET_KIOSK_ENABLED = "setKioskEnabled";
     public static final String SWITCH_LAUNCHER = "switchLauncher";
     public static final String IS_IN_KIOSK = "isInKiosk";
     public static final String IS_SET_AS_LAUNCHER = "isSetAsLauncher";
