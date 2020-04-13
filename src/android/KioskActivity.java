@@ -26,8 +26,6 @@ public class KioskActivity extends CordovaActivity {
 
     public static volatile boolean running = false;
 
-    private StatusBarOverlay statusBarOverlay = null;
-
     private final List blockedKeys = new ArrayList(Arrays.asList(KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_UP));
 
     protected void onStart() {
@@ -53,21 +51,21 @@ public class KioskActivity extends CordovaActivity {
 
         loadUrl(launchUrl);
 
-        // https://github.com/apache/cordova-plugin-statusbar/blob/master/src/android/StatusBar.java
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // // https://github.com/apache/cordova-plugin-statusbar/blob/master/src/android/StatusBar.java
+        // getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+        // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        // https://github.com/hkalina/cordova-plugin-kiosk/issues/14
-        View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
-        // Remember that you should never show the action bar if the
-        // status bar is hidden, so hide that too if necessary.
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null) actionBar.hide();
+        // // https://github.com/hkalina/cordova-plugin-kiosk/issues/14
+        // View decorView = getWindow().getDecorView();
+        // // Hide the status bar.
+        // decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+        // // Remember that you should never show the action bar if the
+        // // status bar is hidden, so hide that too if necessary.
+        // ActionBar actionBar = getActionBar();
+        // if (actionBar != null) actionBar.hide();
 
-        // add overlay to prevent statusbar access by swiping
-        statusBarOverlay = StatusBarOverlay.createOrObtainPermission(this);
+        // // add overlay to prevent statusbar access by swiping
+        // statusBarOverlay = StatusBarOverlay.createOrObtainPermission(this);
     }
 
     @Override
