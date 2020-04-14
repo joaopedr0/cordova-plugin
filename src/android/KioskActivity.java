@@ -110,14 +110,14 @@ public class KioskActivity extends CordovaActivity {
             ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
             am.moveTaskToFront(getTaskId(), ActivityManager.MOVE_TASK_WITH_HOME);
 
-        //     // sometime required to close opened notification area
-        //     Timer timer = new Timer();
-        //     timer.schedule(new TimerTask(){
-        //         public void run() {
-        //             Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
-        //             sendBroadcast(closeDialog);
-        //         }
-        //     }, 500); // 0.5 second
+            // sometime required to close opened notification area
+            Timer timer = new Timer();
+            timer.schedule(new TimerTask(){
+                public void run() {
+                    Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+                    sendBroadcast(closeDialog);
+                }
+            }, 500); // 0.5 second
         }
     }
 }
