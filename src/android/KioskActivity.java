@@ -81,10 +81,10 @@ public class KioskActivity extends CordovaActivity {
     protected void onPause() {
         super.onPause();
 
-        // ActivityManager activityManager = (ActivityManager) getApplicationContext()
-        //         .getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager activityManager = (ActivityManager) getApplicationContext()
+                .getSystemService(Context.ACTIVITY_SERVICE);
 
-        // activityManager.moveTaskToFront(getTaskId(), 0);
+        activityManager.moveTaskToFront(getTaskId(), 0);
 
     }
 
@@ -102,22 +102,22 @@ public class KioskActivity extends CordovaActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if(!hasFocus) {
-        //     System.out.println("Focus lost - closing system dialogs");
+            System.out.println("Focus lost - closing system dialogs");
 
             Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
             sendBroadcast(closeDialog);
 
-        //     ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
-        //     am.moveTaskToFront(getTaskId(), ActivityManager.MOVE_TASK_WITH_HOME);
+            // ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
+            // am.moveTaskToFront(getTaskId(), ActivityManager.MOVE_TASK_WITH_HOME);
 
-        //     // sometime required to close opened notification area
-        //     Timer timer = new Timer();
-        //     timer.schedule(new TimerTask(){
-        //         public void run() {
-        //             Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
-        //             sendBroadcast(closeDialog);
-        //         }
-        //     }, 500); // 0.5 second
+            // sometime required to close opened notification area
+            // Timer timer = new Timer();
+            // timer.schedule(new TimerTask(){
+            //     public void run() {
+            //         Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+            //         sendBroadcast(closeDialog);
+            //     }
+            // }, 500); // 0.5 second
         }
     }
 }
