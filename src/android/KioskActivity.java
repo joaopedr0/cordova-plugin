@@ -26,6 +26,8 @@ public class KioskActivity extends CordovaActivity {
 
     public static volatile boolean running = false;
 
+    private StatusBarOverlay statusBarOverlay = null;
+
     private final List blockedKeys = new ArrayList(Arrays.asList(KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_UP));
 
     protected void onStart() {
