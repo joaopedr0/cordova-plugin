@@ -67,16 +67,16 @@ public class KioskActivity extends CordovaActivity {
         if (actionBar != null) actionBar.hide();
 
         // add overlay to prevent statusbar access by swiping
-        // statusBarOverlay = StatusBarOverlay.createOrObtainPermission(this);
+        statusBarOverlay = StatusBarOverlay.createOrObtainPermission(this);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        // if (statusBarOverlay != null) {
-        //     statusBarOverlay.destroy(this);
-        //     statusBarOverlay = null;
-        // }
+        if (statusBarOverlay != null) {
+            statusBarOverlay.destroy(this);
+            statusBarOverlay = null;
+        }
     }
 
     @Override
