@@ -46,8 +46,6 @@ public class KioskActivity extends CordovaActivity {
         System.out.println("KioskActivity paused");
         super.onCreate(savedInstanceState);
         super.init();
-        // add overlay to prevent statusbar access by swiping
-        statusBarOverlay = StatusBarOverlay.createOrObtainPermission(this);
 
         if (running) {
             finish(); // prevent more instances of kiosk activity
@@ -68,15 +66,17 @@ public class KioskActivity extends CordovaActivity {
         ActionBar actionBar = getActionBar();
         if (actionBar != null) actionBar.hide();
 
+        // add overlay to prevent statusbar access by swiping
+        // statusBarOverlay = StatusBarOverlay.createOrObtainPermission(this);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (statusBarOverlay != null) {
-            statusBarOverlay.destroy(this);
-            statusBarOverlay = null;
-        }
+        // if (statusBarOverlay != null) {
+        //     statusBarOverlay.destroy(this);
+        //     statusBarOverlay = null;
+        // }
     }
 
     @Override
