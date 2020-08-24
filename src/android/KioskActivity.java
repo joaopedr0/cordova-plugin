@@ -106,8 +106,8 @@ public class KioskActivity extends CordovaActivity {
         if(!hasFocus) {
             System.out.println("Focus lost - closing system dialogs");
 
-            // Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
-            // sendBroadcast(closeDialog);
+            Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+            sendBroadcast(closeDialog);
 
             ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
             am.moveTaskToFront(getTaskId(), ActivityManager.MOVE_TASK_WITH_HOME);
