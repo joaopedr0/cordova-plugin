@@ -50,6 +50,7 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
                 <uses-permission android:name="android.permission.REORDER_TASKS"/>
                 <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+                <uses-permission android:name="android.permission.WAKE_LOCK" />
         </config-file>
 
         <source-file src="src/android/KioskMode.java" target-dir="src/com/cordova/plugin" />

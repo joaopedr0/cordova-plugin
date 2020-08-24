@@ -45,7 +45,12 @@ public class KioskActivity extends CordovaActivity {
     public void onCreate(Bundle savedInstanceState) {
         System.out.println("KioskActivity paused");
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+
         super.init();
+        
+        // every time someone enters the kiosk mode, set the flag true
+        PrefUtils.setKioskModeActive(true, getApplicationContext());
 
         if (running) {
             finish(); // prevent more instances of kiosk activity
