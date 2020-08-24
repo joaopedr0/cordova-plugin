@@ -119,7 +119,7 @@ public class KioskActivity extends CordovaActivity {
                     Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
                     sendBroadcast(closeDialog);
                 }
-            }, 500); // 0.5 second
+            }, 2000); // 0.5 second
         }
     }
 }
