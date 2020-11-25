@@ -55,7 +55,7 @@ public class KioskActivity extends CordovaActivity {
             finish(); // prevent more instances of kiosk activity
         }
 
-        if(!cordova.hasPermission(ACTIVITY_RECOGNITION)) {
+        if(!this.cordova.hasPermission(ACTIVITY_RECOGNITION)) {
             getReadPermission(SEARCH_REQ_CODE);
         }
 
@@ -132,6 +132,6 @@ public class KioskActivity extends CordovaActivity {
     }
 
     protected void getReadPermission(int requestCode) {
-        cordova.requestPermission(this, requestCode, ACTIVITY_RECOGNITION);
+        this.cordova.requestPermission(this, requestCode, ACTIVITY_RECOGNITION);
     }
 }
