@@ -30,10 +30,6 @@ public class KioskActivity extends CordovaActivity {
 
     private final List blockedKeys = new ArrayList(Arrays.asList(KeyEvent.KEYCODE_VOLUME_DOWN, KeyEvent.KEYCODE_VOLUME_UP));
 
-    public static final String ACTIVITY_RECOGNITION = Manifest.permission.ACTIVITY_RECOGNITION;
-
-    public static final int SEARCH_REQ_CODE = 0;
-
     protected void onStart() {
         super.onStart();
         System.out.println("KioskActivity started");
@@ -53,10 +49,6 @@ public class KioskActivity extends CordovaActivity {
 
         if (running) {
             finish(); // prevent more instances of kiosk activity
-        }
-
-        if(!this.cordova.hasPermission(ACTIVITY_RECOGNITION)) {
-            getReadPermission(SEARCH_REQ_CODE);
         }
 
         loadUrl(launchUrl);
@@ -129,9 +121,5 @@ public class KioskActivity extends CordovaActivity {
                 }
             }, 2000); // 0.5 second
         }
-    }
-
-    protected void getReadPermission(int requestCode) {
-        this.cordova.requestPermission(this, requestCode, ACTIVITY_RECOGNITION);
     }
 }
